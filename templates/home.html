@@ -1,0 +1,66 @@
+<!-- header starts -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  			<div class="container">
+			    <div class="navbar-header">
+			      <!-- <a class="mainLogo" href="http://www.castsoftware.com/"> -->
+			      <a class="mainLogo" href="" target='_blank'>
+			      	<span class="logoText">Enroco</span>
+			      </a>
+			    </div>
+			    <div class="userName" ng-click='showUser()'>
+			    	<a href="#" class="userProfile">
+			    		<i class="fa fa-lg fa-user-circle" aria-hidden="true"></i>
+			    	</a>
+			    </div>
+			    
+			</div>
+		</nav>
+		<div class="arrowBox" ng-show="myUser">
+	        <ul class="">
+	        	<li>
+	        		<a href="javascript:void(0);">
+	        			<span class="profileIcon"> Ragaven</span>
+	        		</a>
+	        	</li>
+	            <li><a href="javascript:void(0);"><span class="profileIcon"><i class="fa fa-user" aria-hidden="true"></i></span> My Profile</a></li>
+	            <li><a href="javascript:void(0);"><span class="profileIcon"><i class="fa fa-cog" aria-hidden="true"></i></span> Account Settings</a></li>
+	            <li><a href="javascript:void(0);"><span class="profileIcon"><i class="fa fa-question-circle" aria-hidden="true"></i></span> Help</a></li>
+	            <li><a href="javascript:void(0);"><span class="profileIcon"><i class="fa fa-sign-in" aria-hidden="true"></i></span> Log out</a></li>
+	        </ul>
+	    </div>
+<!-- header ends -->
+
+
+<div class="row">  
+   <div class="col-md-12">
+		<div class="whiteText">
+			<h3 style='text-decoration: underline;'>User Details:</h3>
+			<p>Name: {{myData.name}}</p>
+			<p>Age: {{myData.age}}</p>
+			<p>Age: {{myData.gender}}</p>
+			<p>Areas Of Interest: 
+				{{myData.areasOfInterest[0]}},
+			    {{myData.areasOfInterest[1]}},
+			    {{myData.areasOfInterest[2]}}
+			</p>
+			<!-- <p><button type="button" class="btn btn-primary" ng-click='getUserInfo()'>Get User Info</button></p> -->
+
+			</div>
+		</div> 
+   </div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="facebook">Facebook <span href="#" class="fa fa-facebook"></span> </a>
+  <a href="#" id="twitter">Twitter <span href="#" class="fa fa-twitter"></span> </a>
+  <a href="#" id="linkedin">Linkedin <span href="#" class="fa fa-linkedin"></span> </a>
+  <a href="#" id="email">Email <span href="#" class="fa fa-envelope"></span> </a>
+</div>
+
+
+<p style='display:none;' ng-controller='universityController'>{{getUserInfo}}</p>
+<p ng-bind-html='getUserInfo' class='whiteText'></p>
+
+
+  	
+  
